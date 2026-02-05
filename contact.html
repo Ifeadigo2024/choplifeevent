@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHOPLIFE EVENTS | Contact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-wrap">
+      <a class="brand" href="./index.html"><img src="./Assets/536-x-150-white.png" alt="CHOPLIFE EVENTS"></a>
+      <nav class="nav">
+        <a href="./index.html">Home</a>
+        <a href="./services.html">Services</a>
+        <a href="./gallery.html">Gallery</a>
+        <a href="./about.html">About</a>
+        <a class="btn" href="./contact.html" aria-current="page">Contact</a>
+      </nav>
+      <button id="menu-btn" class="menu-btn" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+    </div>
+    <div class="container mobile-nav" id="mobile-nav">
+      <a href="./index.html">Home</a>
+      <a href="./services.html">Services</a>
+      <a href="./gallery.html">Gallery</a>
+      <a href="./about.html">About</a>
+      <a class="active" href="./contact.html" aria-current="page">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero-wrap">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h1 class="page-title">Book Us Today</h1>
+          <p class="page-lead">Share your event details and we'll continue the conversation on WhatsApp.</p>
+        </div>
+        <div class="page-hero-card">
+          <div class="mini-row">
+            <span class="mini-icon"><i class="fab fa-whatsapp"></i></span>
+            <div>
+              <h3>Fast response</h3>
+              <p>We reply on WhatsApp and guide you through the next steps.</p>
+            </div>
+          </div>
+          <div class="mini-row">
+            <span class="mini-icon"><i class="fas fa-calendar-check"></i></span>
+            <div>
+              <h3>Clear planning</h3>
+              <p>Timeline, vendors, and coordination - aligned to your vision and budget.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:32px;">
+      <div class="container contact-grid">
+        <form id="contactForm" class="panel contact-form" aria-label="Contact form">
+          <div class="form-head">
+            <h2 style="font-size:2rem; margin-bottom:6px;">Event Details</h2>
+            <p class="section-sub">Fields marked with * are required.</p>
+          </div>
+
+          <div class="form-grid" style="margin-top:16px;">
+            <div class="field">
+              <label for="name">Full Name *</label>
+              <input id="name" type="text" placeholder="Your name" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="email">Email Address *</label>
+              <input id="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="eventType">Event Type *</label>
+              <input id="eventType" type="text" placeholder="Wedding, Birthday, Corporate..." required>
+            </div>
+            <div class="field">
+              <label for="eventDate">Event Date *</label>
+              <input id="eventDate" type="date" required>
+            </div>
+            <div class="field full">
+              <label for="eventLocation">Event Location *</label>
+              <input id="eventLocation" type="text" placeholder="City, venue name, or address" autocomplete="on" required>
+            </div>
+            <div class="field">
+              <label for="guestCount">Number of Guests *</label>
+              <input id="guestCount" type="number" min="1" placeholder="e.g., 120" inputmode="numeric" required>
+            </div>
+            <div class="field">
+              <label for="phone">Phone / WhatsApp (optional)</label>
+              <input id="phone" type="tel" placeholder="+234..." autocomplete="tel" inputmode="tel">
+            </div>
+            <div class="field full">
+              <label for="message">Message *</label>
+              <textarea id="message" placeholder="Tell us the vibe you want, budget range, and any special requests." required></textarea>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn" type="submit">Send to WhatsApp</button>
+            <a class="btn-outline" href="https://wa.link/3kjncq" target="_blank" rel="noopener noreferrer">Chat Directly</a>
+          </div>
+
+          <p class="fineprint">Tip: The more details you share, the faster we can recommend ideas and next steps.</p>
+        </form>
+
+        <aside class="contact-aside" aria-label="Contact information">
+          <div class="panel">
+            <h3 style="margin-bottom:10px;">Direct Contact</h3>
+            <div class="contact-methods">
+              <a class="contact-method" href="tel:+2348112188176">
+                <span class="mini-icon"><i class="fas fa-phone"></i></span>
+                <span>+234 811 2188 176</span>
+              </a>
+              <a class="contact-method" href="mailto:Choplifeevents@outlook.com">
+                <span class="mini-icon"><i class="fas fa-envelope"></i></span>
+                <span>Choplifeevents@outlook.com</span>
+              </a>
+            </div>
+            <div class="socials" style="margin-top:12px;">
+              <a href="https://www.instagram.com/choplifeevents.ng" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.facebook.com/username" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://wa.link/3kjncq" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+              <a href="https://www.tiktok.com/@username" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
+
+          <div class="panel" style="margin-top:16px;">
+            <h3 style="margin-bottom:10px;">What Happens Next</h3>
+            <ul class="check-list">
+              <li>We reply on WhatsApp and confirm your event details.</li>
+              <li>We suggest ideas, a plan, and the best-fit service option.</li>
+              <li>We share a clear quote and timeline for delivery.</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img class="footer-logo" src="./Assets/536-x-150-white.png" alt="CHOPLIFE EVENTS">
+        <p class="section-sub">We love creating exceptional experiences from conceptualization to execution.</p>
+      </div>
+      <div>
+        <h3 class="footer-title">Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="./gallery.html">Gallery</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-title">Connect</h3>
+        <p class="section-sub">+234 811 2188 176<br>Choplifeevents@outlook.com</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">&copy; 2025 CHOPLIFE EVENTS. All rights reserved.</div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
