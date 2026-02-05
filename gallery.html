@@ -32,22 +32,181 @@
     </div>
   </header>
 
-  <main class="section">
-    <div class="container">
-      <h1 class="section-heading">Gallery</h1>
-      <p class="section-sub">A selection of our event work across weddings, social parties, and corporate experiences.</p>
-      <div class="grid-4" style="margin-top:24px;">
-        <div class="gallery-item"><img src="./Assets/img 6.jpg" alt="Event Image"><div class="gallery-caption"><h4>Event Image</h4><span class="badge">NEW</span></div></div>
-        <div class="gallery-item"><img src="./Assets/img 7.jpg" alt="Event Image 2"><div class="gallery-caption"><h4>Event Image</h4><span class="badge">NEW</span></div></div>
-        <div class="gallery-item"><img src="./Assets/img 8.jpg" alt="Wedding Image"><div class="gallery-caption"><h4>Wedding Image</h4><span class="badge">NEW</span></div></div>
-        <div class="gallery-item"><img src="./Assets/img 9.jpg" alt="Wedding Image 2"><div class="gallery-caption"><h4>Wedding Image</h4><span class="badge">NEW</span></div></div>
-        <div class="gallery-item"><img src="./Assets/img 10.jpg" alt="Party Image"><div class="gallery-caption"><h4>Party Image</h4><span class="badge">NEW</span></div></div>
-        <div class="gallery-item"><img src="./Assets/img 11.jpg" alt="Party Image 2"><div class="gallery-caption"><h4>Party Image</h4><span class="badge">NEW</span></div></div>
-        <div class="gallery-item"><img src="./Assets/img 12.jpg" alt="Corporate Event"><div class="gallery-caption"><h4>Corporate Event</h4><span class="badge">NEW</span></div></div>
-        <div class="gallery-item"><img src="./Assets/img 13.jpg" alt="Corporate Event 2"><div class="gallery-caption"><h4>Corporate Event</h4><span class="badge">NEW</span></div></div>
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero-wrap">
+        <div>
+          <p class="eyebrow">Gallery</p>
+          <h1 class="page-title">A Collection of Moments</h1>
+          <p class="page-lead">A selection of our event work across weddings, social parties, corporate experiences, and premium decor setups.</p>
+        </div>
+        <div class="page-hero-card">
+          <div class="mini-row">
+            <span class="mini-icon"><i class="fas fa-camera-retro"></i></span>
+            <div>
+              <h3>Styled &amp; captured</h3>
+              <p>Every image reflects our attention to detail, coordination, and finish.</p>
+            </div>
+          </div>
+          <div class="mini-row">
+            <span class="mini-icon"><i class="fas fa-magic"></i></span>
+            <div>
+              <h3>Signature CHOPLIFE touch</h3>
+              <p>Elegant concepts, clean execution, unforgettable guest experience.</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <section class="section" style="padding-top:32px;">
+      <div class="container">
+        <div class="gallery-toolbar" aria-label="Gallery filters">
+          <div class="chip-group" role="tablist" aria-label="Filter gallery">
+            <button class="chip-btn active" type="button" data-filter="all" role="tab" aria-selected="true">All</button>
+            <button class="chip-btn" type="button" data-filter="wedding" role="tab" aria-selected="false">Weddings</button>
+            <button class="chip-btn" type="button" data-filter="social" role="tab" aria-selected="false">Social</button>
+            <button class="chip-btn" type="button" data-filter="corporate" role="tab" aria-selected="false">Corporate</button>
+            <button class="chip-btn" type="button" data-filter="decor" role="tab" aria-selected="false">Decor</button>
+          </div>
+          <p class="section-sub" style="margin:0;">Tip: Click any photo to view larger.</p>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid" aria-label="Gallery grid">
+          <button class="gallery-tile" type="button" data-category="social" data-src="./Assets/img 6.jpg" data-title="Social Event" data-tag="SOCIAL" aria-label="Open Social Event photo">
+            <img src="./Assets/img 6.jpg" alt="Social event setup">
+            <div class="tile-overlay">
+              <div class="tile-meta">
+                <h4>Social Event</h4>
+                <span class="tile-badge">SOCIAL</span>
+              </div>
+            </div>
+          </button>
+
+          <button class="gallery-tile" type="button" data-category="decor" data-src="./Assets/img 7.jpg" data-title="Tablescape Styling" data-tag="DECOR" aria-label="Open Tablescape Styling photo">
+            <img src="./Assets/img 7.jpg" alt="Tablescape styling and decor">
+            <div class="tile-overlay">
+              <div class="tile-meta">
+                <h4>Tablescape Styling</h4>
+                <span class="tile-badge">DECOR</span>
+              </div>
+            </div>
+          </button>
+
+          <button class="gallery-tile" type="button" data-category="wedding" data-src="./Assets/img 8.jpg" data-title="Wedding Reception" data-tag="WEDDING" aria-label="Open Wedding Reception photo">
+            <img src="./Assets/img 8.jpg" alt="Wedding reception decor and ambience">
+            <div class="tile-overlay">
+              <div class="tile-meta">
+                <h4>Wedding Reception</h4>
+                <span class="tile-badge">WEDDING</span>
+              </div>
+            </div>
+          </button>
+
+          <button class="gallery-tile" type="button" data-category="wedding" data-src="./Assets/img 9.jpg" data-title="Wedding Moments" data-tag="WEDDING" aria-label="Open Wedding Moments photo">
+            <img src="./Assets/img 9.jpg" alt="Wedding moment and celebration">
+            <div class="tile-overlay">
+              <div class="tile-meta">
+                <h4>Wedding Moments</h4>
+                <span class="tile-badge">WEDDING</span>
+              </div>
+            </div>
+          </button>
+
+          <button class="gallery-tile" type="button" data-category="social" data-src="./Assets/img 10.jpg" data-title="Party Experience" data-tag="SOCIAL" aria-label="Open Party Experience photo">
+            <img src="./Assets/img 10.jpg" alt="Party celebration ambience">
+            <div class="tile-overlay">
+              <div class="tile-meta">
+                <h4>Party Experience</h4>
+                <span class="tile-badge">SOCIAL</span>
+              </div>
+            </div>
+          </button>
+
+          <button class="gallery-tile" type="button" data-category="social" data-src="./Assets/img 11.jpg" data-title="Birthday Celebration" data-tag="SOCIAL" aria-label="Open Birthday Celebration photo">
+            <img src="./Assets/img 11.jpg" alt="Birthday celebration setup">
+            <div class="tile-overlay">
+              <div class="tile-meta">
+                <h4>Birthday Celebration</h4>
+                <span class="tile-badge">SOCIAL</span>
+              </div>
+            </div>
+          </button>
+
+          <button class="gallery-tile" type="button" data-category="corporate" data-src="./Assets/img 12.jpg" data-title="Corporate Experience" data-tag="CORPORATE" aria-label="Open Corporate Experience photo">
+            <img src="./Assets/img 12.jpg" alt="Corporate event experience">
+            <div class="tile-overlay">
+              <div class="tile-meta">
+                <h4>Corporate Experience</h4>
+                <span class="tile-badge">CORPORATE</span>
+              </div>
+            </div>
+          </button>
+
+          <button class="gallery-tile" type="button" data-category="corporate" data-src="./Assets/img 13.jpg" data-title="Conference Setup" data-tag="CORPORATE" aria-label="Open Conference Setup photo">
+            <img src="./Assets/img 13.jpg" alt="Conference or corporate setup">
+            <div class="tile-overlay">
+              <div class="tile-meta">
+                <h4>Conference Setup</h4>
+                <span class="tile-badge">CORPORATE</span>
+              </div>
+            </div>
+          </button>
+
+          <button class="gallery-tile" type="button" data-category="decor" data-src="./Assets/img 14.jpg" data-title="Food &amp; Entertainment" data-tag="DECOR" aria-label="Open Food and Entertainment photo">
+            <img src="./Assets/img 14.jpg" alt="Food and entertainment display">
+            <div class="tile-overlay">
+              <div class="tile-meta">
+                <h4>Food &amp; Entertainment</h4>
+                <span class="tile-badge">DECOR</span>
+              </div>
+            </div>
+          </button>
+
+          <button class="gallery-tile" type="button" data-category="decor" data-src="./Assets/img 15.jpg" data-title="Venue Styling" data-tag="DECOR" aria-label="Open Venue Styling photo">
+            <img src="./Assets/img 15.jpg" alt="Venue styling and decor">
+            <div class="tile-overlay">
+              <div class="tile-meta">
+                <h4>Venue Styling</h4>
+                <span class="tile-badge">DECOR</span>
+              </div>
+            </div>
+          </button>
+
+          <button class="gallery-tile" type="button" data-category="wedding" data-src="./Assets/img 4.jpg" data-title="Elegant Reception" data-tag="WEDDING" aria-label="Open Elegant Reception photo">
+            <img src="./Assets/img 4.jpg" alt="Elegant wedding reception decor">
+            <div class="tile-overlay">
+              <div class="tile-meta">
+                <h4>Elegant Reception</h4>
+                <span class="tile-badge">WEDDING</span>
+              </div>
+            </div>
+          </button>
+        </div>
+
+        <div class="home-cta" style="margin-top:18px;">
+          <div>
+            <h3>Want your event featured here?</h3>
+            <p>Let's bring your vision to life with premium planning, styling, and execution.</p>
+          </div>
+          <a class="btn" href="./contact.html">Start Planning</a>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Image viewer">
+      <div class="lightbox-top">
+        <div class="lightbox-title" id="lightboxTitle">Photo</div>
+        <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close viewer"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="lightbox-body">
+        <img id="lightboxImg" src="" alt="">
+      </div>
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
 
   <footer class="site-footer">
     <div class="container footer-grid">

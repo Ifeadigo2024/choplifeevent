@@ -62,4 +62,93 @@ message
       contactForm.reset();
     });
   }
+
+  // Gallery: filters + lightbox (only runs on gallery.html)
+  var galleryTiles = document.querySelectorAll('.gallery-tile');
+  var filterBtns = document.querySelectorAll('[data-filter]');
+  var lightbox = document.getElementById('lightbox');
+  var lightboxImg = document.getElementById('lightboxImg');
+  var lightboxTitle = document.getElementById('lightboxTitle');
+  var lightboxCaption = document.getElementById('lightboxCaption');
+  var lightboxClose = document.getElementById('lightboxClose');
+
+  function setFilterActive(btn) {
+    filterBtns.forEach(function (b) {
+      b.classList.remove('active');
+      b.setAttribute('aria-selected', 'false');
+    });
+    btn.classList.add('active');
+    btn.setAttribute('aria-selected', 'true');
+  }
+
+  function applyFilter(filter) {
+    galleryTiles.forEach(function (tile) {
+      var cat = tile.getAttribute('data-category') || 'all';
+      var show = filter === 'all' || cat === filter;
+      if (show) {
+        tile.removeAttribute('hidden');
+      } else {
+        tile.setAttribute('hidden', '');
+      }
+    });
+  }
+
+  if (filterBtns.length && galleryTiles.length) {
+    filterBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var filter = btn.getAttribute('data-filter') || 'all';
+        setFilterActive(btn);
+        applyFilter(filter);
+      });
+    });
+  }
+
+  function openLightbox(tile) {
+    if (!lightbox || !lightboxImg) return;
+
+    var src = tile.getAttribute('data-src') || '';
+    var title = tile.getAttribute('data-title') || 'Photo';
+    var tag = tile.getAttribute('data-tag') || '';
+
+    lightboxImg.src = src;
+    lightboxImg.alt = title;
+    if (lightboxTitle) lightboxTitle.textContent = title;
+    if (lightboxCaption) lightboxCaption.textContent = tag ? ('Category: ' + tag) : '';
+
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    if (!lightbox || !lightboxImg) return;
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    lightboxImg.src = '';
+    document.body.style.overflow = '';
+  }
+
+  if (galleryTiles.length) {
+    galleryTiles.forEach(function (tile) {
+      tile.addEventListener('click', function () {
+        openLightbox(tile);
+      });
+    });
+  }
+
+  if (lightboxClose) {
+    lightboxClose.addEventListener('click', closeLightbox);
+  }
+
+  if (lightbox) {
+    lightbox.addEventListener('click', function (e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && lightbox && lightbox.classList.contains('open')) {
+      closeLightbox();
+    }
+  });
 });
