@@ -129,7 +129,6 @@ p { margin: 0; }
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  display: inline-grid;
   place-items: center;
 }
 
@@ -139,8 +138,7 @@ p { margin: 0; }
 }
 
 .mobile-nav.open {
-  display: block;
-  animation: dropIn 160ms ease-out;
+  display: none; /* only opens on mobile breakpoint */
 }
 
 .mobile-nav {
@@ -1018,7 +1016,11 @@ button.btn-outline {
 
 @media (max-width: 980px) {
   .nav { display: none; }
-  .menu-btn { display: block; }
+  .menu-btn { display: inline-grid; }
+  .mobile-nav.open {
+    display: block;
+    animation: dropIn 160ms ease-out;
+  }
   .page-hero-wrap { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
   .gallery-tile { grid-column: span 6; }
